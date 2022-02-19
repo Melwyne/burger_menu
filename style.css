@@ -1,0 +1,66 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+header{
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 15px;
+    height: 100vh;
+}
+li{
+    list-style-type: none;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+.burger{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 20px;
+    cursor: pointer;
+}
+.burger > div{
+    width: 25px;
+    height: 4px;
+    background-color: coral;
+    border-radius: 25px;
+    z-index: 4;
+    transition: 0.3s ease;
+}
+.modif div{
+    position: fixed;
+    cursor: pointer;
+}
+.modif div:nth-child(1){
+    transform: translate(50%);
+    transform: rotate(-45deg);
+    background-color: rgb(0, 0, 0);
+}
+.modif div:nth-child(3){
+    transform: translate(50%);
+    transform: rotate(45deg);
+    background-color: rgb(0, 0, 0);
+}
+.modif div:nth-child(2){
+    opacity: 0;
+}
+.menuBurger{
+    position: fixed;
+    right: -50%;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    font-size: 25px;
+    background-color: coral;
+    width: 300px;
+    z-index: 3;
+    transition: 0.3s;
+}
+.menuBurgerCache{
+    right: 0%;
+}
